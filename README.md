@@ -11,9 +11,15 @@ Used for debugging a Gumstix Overo touchscreen driver.
 
 ### Build with Yocto/OE
 
-There is a bitbake recipe file included with the project.
+A bitbake recipe can be found in the [meta-overo][meta-overo] Yocto
+layer. Find it here
+
+    meta-overo/recipes-qt/qt4/tstracker/tstracker.bb
+
+ 
 It has a dependency on `qt4e`. Change this as appropriate if you
-are using the X11 version of Qt4 or if you are using Qt5.
+are using the X11 version of Qt4.
+
 
 ### Run
 
@@ -23,4 +29,7 @@ the display, you will see the X,Y coordinates of the last move event.
     $ tstracker -qws
 
 The app displays fullscreen when run on a Qt4 embedded system.
+
+
+[meta-overo]: https://github.com/jumpnow/meta-overo
 
