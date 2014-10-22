@@ -1,7 +1,6 @@
-# tstracker
+## tstracker
 
-A simple Qt app for debugging Linux touchscreen drivers and the touchscreen event interface to Qt applications.
+A simple Qt app for tracking touchscreen pointer movements.
 
-The default UI is initialized for a 320x240 screen.
+Used for debugging a Gumstix Overo touchscreen driver.
 
-Adjust in tstracker.ui for other sizes displays if you want full-screen behavior.
