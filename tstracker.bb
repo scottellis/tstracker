@@ -6,7 +6,7 @@ inherit qt4e
 
 SRCREV = "${AUTOREV}"
 
-SRC_URI = "git://github.com/Pansenti/tstracker.git;protocol=git"
+SRC_URI = "git://github.com/scottellis/tstracker.git;protocol=git"
 
 S = "${WORKDIR}/git"
 
