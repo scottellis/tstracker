@@ -33,7 +33,7 @@
 #define TSTRACKER_H
 
 #include <QtGui/QMainWindow>
-#include "ui_tstracker.h"
+#include <qpushbutton.h>
 
 class tstracker : public QMainWindow
 {
@@ -46,7 +46,9 @@ protected:
 	bool eventFilter(QObject *, QEvent *);
 
 private:
-	Ui::tstrackerClass ui;
+	void layoutWindow();
+
+	QPushButton *m_exitButton;
 };
 
 #endif // TSTRACKER_H

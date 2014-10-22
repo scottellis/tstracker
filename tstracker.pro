@@ -9,8 +9,6 @@ SOURCES += main.cpp \
 
 HEADERS += tstracker.h
 
-FORMS += tstracker.ui
-
 target.path = /usr/bin
 INSTALLS += target
 

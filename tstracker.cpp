@@ -32,19 +32,16 @@
 #include "tstracker.h"
 #include <qdebug.h>
 #include <qevent.h>
+#include <qboxlayout.h>
 
 tstracker::tstracker(QWidget *parent, Qt::WFlags flags)
 	: QMainWindow(parent, flags)
 {
-	ui.setupUi(this);
-
-	qApp->installEventFilter(this);
-
 	setWindowFlags(Qt::Window | Qt::CustomizeWindowHint);
 
-	setMinimumSize(320, 220);
+	layoutWindow();
 
-	connect(ui.exitButton, SIGNAL(clicked()), SLOT(close()));
+	connect(m_exitButton, SIGNAL(clicked()), SLOT(close()));
 }
 
 bool tstracker::eventFilter(QObject *, QEvent *event)
@@ -57,5 +54,21 @@ bool tstracker::eventFilter(QObject *, QEvent *event)
 	}
 
 	return false;
+}
+
+void tstracker::layoutWindow()
+{
+	m_exitButton = new QPushButton("Exit");
+	m_exitButton->setMinimumSize(60, 40);
+
+	QHBoxLayout *layout = new QHBoxLayout;
+	layout->addStretch();
+	layout->addWidget(m_exitButton);
+	layout->addStretch();
+
+	QWidget *widget = new QWidget;
+	widget->setLayout(layout);
+
+	setCentralWidget(widget);
 }
 

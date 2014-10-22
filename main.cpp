@@ -41,11 +41,14 @@ int main(int argc, char *argv[])
 	QApplication a(argc, argv);
 	tstracker w;
 
+	a.installEventFilter(&w);
+
 #ifdef Q_WS_QWS
 	QWSServer::setBackground(QBrush(Qt::black));
-#endif
-
+	w.showFullScreen();
+#else
 	w.show();
+#endif
 
 	return a.exec();
 }
