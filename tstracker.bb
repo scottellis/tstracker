@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-3-Clause;md5=550794465ba0ec
 
 inherit qt4e
 
-SRCREV = "${AUTOREV}"
+SRCREV = "d3b21cd1c8854b49b9480ea67009aca2729e84ae"
 
 SRC_URI = "git://github.com/scottellis/tstracker.git;protocol=git"
 
